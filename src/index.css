@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-display: "Fraunces", serif;
+  --color-background: oklch(0.982 0.004 80);
+  --color-foreground: oklch(0.13 0.02 80);
+  --color-primary: oklch(0.62 0.125 30);
+  --color-primary-foreground: oklch(0.98 0 0);
+  --color-muted: oklch(0.945 0.01 80);
+  --color-muted-foreground: oklch(0.55 0.02 50);
+  --color-border: oklch(0.88 0.015 70);
+  --color-card: oklch(0.995 0.002 80);
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}
