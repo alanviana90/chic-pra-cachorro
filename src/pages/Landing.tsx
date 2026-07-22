@@ -8,7 +8,7 @@ import { useRef, useState, useEffect } from "react";
 
 // ─── Constants ──────────────────────────────────────────────────
 const WHATSAPP_URL = "https://wa.me/5521979302170?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20banho%20e%20tosa%20para%20meu%20pet!";
-const HERO_IMAGE = "/images/hero/dog-hero-pexels2.jpg";
+const HERO_IMAGE = "https://images.unsplash.com/photo-1580649969708-0f2c74c81797?w=1920&q=80";
 
 const services = [
   { title: "Banho Completo", desc: "Banho com produtos hipoalergênicos, secção e escovação. Seu pet sai limpinho e cheiroso.", highlight: "A partir de R$ 59" },
