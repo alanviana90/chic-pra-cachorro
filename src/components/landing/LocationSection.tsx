@@ -93,7 +93,7 @@ export function LocationSection() {
           >
             <iframe
               title="Localização CHIQUE Pra Cachorro"
-              src="https://www.google.com/maps?q=Rua+Tibiri%C3%A7a+100+Marambaia+S%C3%A3o+Gon%C3%A7alo+RJ&output=embed"
+              src="https://www.google.com/maps/embed/v1/place?key=&q=-22.798699,-42.9550819&center=-22.798699,-42.9550819&zoom=16&maptype=roadmap"
               width="100%"
               height="100%"
               style={{ minHeight: "280px" }}
