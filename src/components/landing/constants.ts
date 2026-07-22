@@ -7,7 +7,7 @@ export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURICo
 export const ADDRESS = {
   full: "Rua Tibiriça, 100 — Marambaia, São Gonçalo — RJ",
 };
-export const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Rua+Tibiri%C3%A7a%2C+100+-+Marambaia%2C+S%C3%A3o+Gon%C3%A7alo+-+RJ";
+export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/fkSq6ymteFGYPzfQ6?g_st=ac";
 
 // ─── Gallery Images (fotos reais dos pets) ───────────────────────
 export interface GalleryImage {
