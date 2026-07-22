@@ -22,19 +22,22 @@ const services = [
 
 const iconMap = [Bath, Scissors, Sparkles, ShieldCheck, Heart, PawPrint, Car] as const;
 
+// ─── Real gallery images from Google Drive ──────────────────────
 const galleryImages = [
-  { url: "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&q=80", pet: "Toddy", service: "Banho & Tosa" },
-  { url: "https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?w=600&q=80", pet: "Luna", service: "Banho Premium" },
-  { url: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=600&q=80", pet: "Bob", service: "Tosa Higiênica" },
-  { url: "https://images.unsplash.com/photo-1517423738875-4f2c9e7c2f2b?w=600&q=80", pet: "Mel", service: "Banho & Tosa" },
-  { url: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80", pet: "Thor", service: "Hidratação" },
-  { url: "https://images.unsplash.com/photo-1534351450181-ea9f78427fe8?w=600&q=80", pet: "Nina", service: "Banho Terapêutico" },
-  { url: "https://images.unsplash.com/photo-1553882809-a4f57e595701?w=600&q=80", pet: "Pipoca", service: "Beleza & Estilo" },
-  { url: "https://images.unsplash.com/photo-1598136494009-ea1775e1e3b0?w=600&q=80", pet: "Fred", service: "Banho Premium" },
-  { url: "https://images.unsplash.com/photo-1568572933382-74d440642117?w=600&q=80", pet: "Belinha", service: "Tosa Completa" },
-  { url: "https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?w=600&q=80", pet: "Rex", service: "Banho & Tosa" },
-  { url: "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=80", pet: "Pirata", service: "SPA Pet" },
-  { url: "https://images.unsplash.com/photo-1544568100-847a948585b9?w=600&q=80", pet: "Amora", service: "Banho Premium" },
+  { url: "/images/banho_tosa/3924455596934638504_3924455532429443327.webp", pet: "Toddy", service: "Banho & Tosa" },
+  { url: "/images/banho_tosa/3924456336449198575_3924456238632809790.webp", pet: "Luna", service: "Banho Premium" },
+  { url: "/images/banho_tosa/3924456723809895286_3924456654070197647.webp", pet: "Bob", service: "Tosa Higiênica" },
+  { url: "/images/banho_tosa/3924457258499783633_3924457168543431874.webp", pet: "Mel", service: "Banho & Tosa" },
+  { url: "/images/banho_tosa/3924458195012389415_3924458107539030109.webp", pet: "Thor", service: "Hidratação" },
+  { url: "/images/banho_tosa/3924462841252643268_3924462779884727124.webp", pet: "Nina", service: "Banho Terapêutico" },
+  { url: "/images/banho_tosa/3924576650243208625_3924576534180301694.webp", pet: "Pipoca", service: "Beleza & Estilo" },
+  { url: "/images/banho_tosa/3924577552286963761_3924577410831798653.webp", pet: "Fred", service: "Banho Premium" },
+  { url: "/images/banho_tosa/3924578401163791126_3924578337622055691.webp", pet: "Belinha", service: "Tosa Completa" },
+  { url: "/images/banho_tosa/3924579846705458825_3924579794110681192.webp", pet: "Rex", service: "Banho & Tosa" },
+  { url: "/images/banho_tosa/3924580167158717812_3924580109321023408.webp", pet: "Pirata", service: "SPA Pet" },
+  { url: "/images/banho_tosa/3941361790375841277.webp", pet: "Amora", service: "Banho Premium" },
+  { url: "/images/banho_tosa/3942796707758673218_3942796626189697645.webp", pet: "Tufão", service: "Tosa Higiênica" },
+  { url: "/images/banho_tosa/3946086034660763122_3946085933388340049.webp", pet: "Brisa", service: "Beleza & Estilo" },
 ];
 
 const testimonials = [
@@ -235,7 +238,7 @@ function GallerySection() {
   );
 }
 
-// ─── Testimonials Section (static) ──────────────────────────────
+// ─── Testimonials Section ───────────────────────────────────────
 function TestimonialsSection() {
   return (
     <section id="testimonials" className="relative py-16 md:py-32">
