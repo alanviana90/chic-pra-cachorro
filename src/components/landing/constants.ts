@@ -5,9 +5,12 @@ export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURICo
 
 // ─── Address ────────────────────────────────────────────────────
 export const ADDRESS = {
-  full: "Rua Tibiriça, 100 — Marambaia, São Gonçalo — RJ",
+  full: "Rua Tibiriça, 100 — Quadra 163, Lote 12, Loja 02 — Marambaia, São Gonçalo — RJ — CEP 24.724-310",
+  cep: "24.724-310",
+  cepSearch: "24724310+Marambaia+S%C3%A3o+Gon%C3%A7alo+RJ",
 };
-export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/fkSq6ymteFGYPzfQ6?g_st=ac";
+export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/KKDskTBaiBLFp3EP9";
+export const GOOGLE_MAPS_CEP_URL = `https://www.google.com/maps/search/?api=1&query=${ADDRESS.cepSearch}`;
 
 // ─── Gallery Images (fotos reais dos pets) ───────────────────────
 export interface GalleryImage {

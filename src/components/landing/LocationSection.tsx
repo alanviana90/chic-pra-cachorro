@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Clock, MapPin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ADDRESS, GOOGLE_MAPS_URL, WHATSAPP_URL } from "./constants";
+import { ADDRESS, GOOGLE_MAPS_URL, GOOGLE_MAPS_CEP_URL, WHATSAPP_URL } from "./constants";
 
 export function LocationSection() {
   return (
@@ -33,9 +33,23 @@ export function LocationSection() {
                 </div>
                 <div>
                   <p className="text-sm font-medium md:text-base">Endereço</p>
-                  <p className="mt-0.5 text-xs text-muted-foreground md:text-sm">
-                    {ADDRESS.full}
+                  <p className="mt-0.5 whitespace-pre-line text-xs text-muted-foreground md:text-sm">
+                    Rua Tibiriça, 100 — Quadra 163, Lote 12, Loja 02
                   </p>
+                  <p className="text-xs text-muted-foreground md:text-sm">
+                    Marambaia, São Gonçalo — RJ
+                  </p>
+                  <a
+                    href={GOOGLE_MAPS_CEP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-0.5 inline-flex items-center gap-1 text-xs text-muted-foreground transition-colors hover:text-primary md:text-sm"
+                  >
+                    <MapPin className="h-3 w-3 shrink-0" />
+                    <span className="underline underline-offset-2 decoration-dotted">
+                      CEP: {ADDRESS.cep}
+                    </span>
+                  </a>
                 </div>
               </div>
 
@@ -93,7 +107,7 @@ export function LocationSection() {
           >
             <iframe
               title="Localização CHIQUE Pra Cachorro"
-              src="https://www.google.com/maps/embed/v1/place?key=&q=-22.798699,-42.9550819&center=-22.798699,-42.9550819&zoom=16&maptype=roadmap"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.099896!2d-42.9572355!3d-22.798699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9997006b532fdd%3A0xfc3f54933b2bbcec!2sChique%20pra%20cachorro%20Paula%20Monteiro%20banho%20e%20tosa!5e0!3m2!1spt-BR!2sbr!4v1"
               width="100%"
               height="100%"
               style={{ minHeight: "280px" }}
