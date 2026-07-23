@@ -3,15 +3,32 @@ export const WHATSAPP_NUMBER = "5521979302170";
 export const WHATSAPP_MESSAGE = "Olá! Gostaria de agendar um banho e tosa para meu pet!";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
-// ─── Address ────────────────────────────────────────────────────
+// ─── Address & Google Maps ────────────────────────────────────────
 export const ADDRESS = {
   full: "Rua Tibiriça, 100 — Quadra 163, Lote 12, Loja 02 — Marambaia, São Gonçalo — RJ — CEP 24.724-310",
   cep: "24.724-310",
   cepSearch: "24724310+Marambaia+S%C3%A3o+Gon%C3%A7alo+RJ",
 };
-export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/KKDskTBaiBLFp3EP9";
-export const GOOGLE_MAPS_SEARCH_URL = "https://www.google.com/maps/search/Rua+Tibiri%C3%A7a+100+Quadra+163+Lote+12+Loja+02+Marambaia+S%C3%A3o+Gon%C3%A7alo+RJ+CEP+24724310/";
+
+// Place ID do Google Business Profile
+const GOOGLE_PLACE_ID = "0x9997006b532fdd:0xfc3f54933b2bbcec";
+
+// URL direta da empresa no Google Maps (abre o perfil correto)
+export const GOOGLE_MAPS_URL = `https://www.google.com/maps/place/?q=place_id:${GOOGLE_PLACE_ID}`;
+
+// URL para traçar rota até o endereço
+export const GOOGLE_MAPS_SEARCH_URL = "https://www.google.com/maps/dir//Rua+Tibiri%C3%A7a+100+Quadra+163+Lote+12+Loja+02+Marambaia+S%C3%A3o+Gon%C3%A7alo+RJ+CEP+24724310/";
+
+// URL do CEP
 export const GOOGLE_MAPS_CEP_URL = `https://www.google.com/maps/search/?api=1&query=${ADDRESS.cepSearch}`;
+
+// URL para deixar avaliação no Google
+export const GOOGLE_REVIEW_URL = `https://search.google.com/local/writereview?placeid=${GOOGLE_PLACE_ID}`;
+
+// Coordenadas para o embed do mapa
+const LAT = "-22.798699";
+const LNG = "-42.9550819";
+export const GOOGLE_MAPS_EMBED_URL = `https://maps.google.com/maps?q=${LAT},${LNG}&z=16&output=embed`;
 
 // ─── Gallery Images (fotos reais dos pets) ───────────────────────
 export interface GalleryImage {

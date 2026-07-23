@@ -1,5 +1,5 @@
-import { Instagram, MapPin, MessageCircle, PawPrint } from "lucide-react";
-import { ADDRESS, WHATSAPP_URL } from "./constants";
+import { Instagram, MapPin, MessageCircle, PawPrint, Star } from "lucide-react";
+import { ADDRESS, WHATSAPP_URL, GOOGLE_REVIEW_URL } from "./constants";
 
 export function FooterSection() {
   return (
@@ -31,6 +31,16 @@ export function FooterSection() {
           </p>
 
           <div className="flex items-center gap-2 md:gap-3">
+            <a
+              href={GOOGLE_REVIEW_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-border/50 text-yellow-600 transition-colors hover:border-yellow-400/30 hover:text-yellow-500 md:h-9 md:w-9"
+              aria-label="Avaliar no Google"
+              title="Avaliar no Google"
+            >
+              <Star className="h-3.5 w-3.5 fill-yellow-500 md:h-4 md:w-4" />
+            </a>
             <a
               href="https://www.instagram.com/paulamonteirobanhoetosa/"
               target="_blank"

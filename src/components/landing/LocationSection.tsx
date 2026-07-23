@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Clock, MapPin, MessageCircle } from "lucide-react";
+import { Clock, MapPin, MessageCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ADDRESS, GOOGLE_MAPS_URL, GOOGLE_MAPS_SEARCH_URL, GOOGLE_MAPS_CEP_URL, WHATSAPP_URL } from "./constants";
+import { ADDRESS, GOOGLE_MAPS_URL, GOOGLE_MAPS_SEARCH_URL, GOOGLE_MAPS_CEP_URL, GOOGLE_REVIEW_URL, GOOGLE_MAPS_EMBED_URL, WHATSAPP_URL } from "./constants";
 
 export function LocationSection() {
   return (
@@ -94,18 +94,27 @@ export function LocationSection() {
                 onClick={() => window.open(GOOGLE_MAPS_URL, "_blank")}
               >
                 <MapPin className="mr-2 h-4 w-4 md:h-5 md:w-5" />
-                Abrir no Maps
+                Ver no Maps
               </Button>
               <Button
                 size="lg"
-                variant="outline"
+                variant="secondary"
                 className="h-11 w-full rounded-full text-sm font-medium sm:w-auto md:h-12 md:text-base"
                 onClick={() => window.open(GOOGLE_MAPS_SEARCH_URL, "_blank")}
               >
                 <MapPin className="mr-2 h-4 w-4 md:h-5 md:w-5" />
-                Rota para o endereço
+                Como chegar
               </Button>
             </div>
+            <Button
+              size="sm"
+              variant="outline"
+              className="mt-3 h-9 w-full rounded-full text-xs font-medium sm:w-auto md:h-10 md:text-sm"
+              onClick={() => window.open(GOOGLE_REVIEW_URL, "_blank")}
+            >
+              <Star className="mr-1.5 h-3.5 w-3.5 fill-yellow-500 text-yellow-500 md:h-4 md:w-4" />
+              Avaliar no Google
+            </Button>
           </motion.div>
 
           {/* Right - Map embed */}
@@ -118,7 +127,7 @@ export function LocationSection() {
           >
             <iframe
               title="Localização CHIQUE Pra Cachorro"
-              src="https://www.google.com/maps/embed?q=Rua+Tibiri%C3%A7a+100+Quadra+163+Lote+12+Loja+02+Marambaia+S%C3%A3o+Gon%C3%A7alo+RJ+CEP+24724310&center=-22.798699,-42.9550819&zoom=16&maptype=roadmap"
+              src={GOOGLE_MAPS_EMBED_URL}
               width="100%"
               height="100%"
               style={{ minHeight: "280px" }}
