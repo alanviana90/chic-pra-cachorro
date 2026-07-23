@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Clock, MapPin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ADDRESS, GOOGLE_MAPS_URL, GOOGLE_MAPS_CEP_URL, WHATSAPP_URL } from "./constants";
+import { ADDRESS, GOOGLE_MAPS_URL, GOOGLE_MAPS_SEARCH_URL, GOOGLE_MAPS_CEP_URL, WHATSAPP_URL } from "./constants";
 
 export function LocationSection() {
   return (
@@ -87,14 +87,25 @@ export function LocationSection() {
               </div>
             </div>
 
-            <Button
-              size="lg"
-              className="mt-6 h-11 w-full rounded-full bg-primary text-sm font-medium text-primary-foreground shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 sm:w-auto md:mt-8 md:h-12 md:text-base"
-              onClick={() => window.open(GOOGLE_MAPS_URL, "_blank")}
-            >
-              <MapPin className="mr-2 h-4 w-4 md:h-5 md:w-5" />
-              Ver no Google Maps
-            </Button>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row md:mt-8">
+              <Button
+                size="lg"
+                className="h-11 w-full rounded-full bg-primary text-sm font-medium text-primary-foreground shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 sm:w-auto md:h-12 md:text-base"
+                onClick={() => window.open(GOOGLE_MAPS_URL, "_blank")}
+              >
+                <MapPin className="mr-2 h-4 w-4 md:h-5 md:w-5" />
+                Abrir no Maps
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-11 w-full rounded-full text-sm font-medium sm:w-auto md:h-12 md:text-base"
+                onClick={() => window.open(GOOGLE_MAPS_SEARCH_URL, "_blank")}
+              >
+                <MapPin className="mr-2 h-4 w-4 md:h-5 md:w-5" />
+                Rota para o endereço
+              </Button>
+            </div>
           </motion.div>
 
           {/* Right - Map embed */}
@@ -107,7 +118,7 @@ export function LocationSection() {
           >
             <iframe
               title="Localização CHIQUE Pra Cachorro"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3677.099896!2d-42.9572355!3d-22.798699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9997006b532fdd%3A0xfc3f54933b2bbcec!2sChique%20pra%20cachorro%20Paula%20Monteiro%20banho%20e%20tosa!5e0!3m2!1spt-BR!2sbr!4v1"
+              src="https://www.google.com/maps/embed?q=Rua+Tibiri%C3%A7a+100+Quadra+163+Lote+12+Loja+02+Marambaia+S%C3%A3o+Gon%C3%A7alo+RJ+CEP+24724310&center=-22.798699,-42.9550819&zoom=16&maptype=roadmap"
               width="100%"
               height="100%"
               style={{ minHeight: "280px" }}

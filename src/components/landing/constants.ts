@@ -10,6 +10,7 @@ export const ADDRESS = {
   cepSearch: "24724310+Marambaia+S%C3%A3o+Gon%C3%A7alo+RJ",
 };
 export const GOOGLE_MAPS_URL = "https://maps.app.goo.gl/KKDskTBaiBLFp3EP9";
+export const GOOGLE_MAPS_SEARCH_URL = "https://www.google.com/maps/search/Rua+Tibiri%C3%A7a+100+Quadra+163+Lote+12+Loja+02+Marambaia+S%C3%A3o+Gon%C3%A7alo+RJ+CEP+24724310/";
 export const GOOGLE_MAPS_CEP_URL = `https://www.google.com/maps/search/?api=1&query=${ADDRESS.cepSearch}`;
 
 // ─── Gallery Images (fotos reais dos pets) ───────────────────────
