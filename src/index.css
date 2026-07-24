@@ -1,7 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap");
 
 @theme inline {
+  --font-sans: "DM Sans", sans-serif;
   --font-display: "Fraunces", serif;
   --color-background: oklch(0.982 0.004 80);
   --color-foreground: oklch(0.13 0.02 80);
@@ -16,5 +18,8 @@
 
 @layer base {
   * { @apply border-border; }
-  body { @apply bg-background text-foreground; }
+  html { scroll-behavior: smooth; }
+  body { @apply bg-background text-foreground font-sans antialiased; }
 }
+
+@layer components { .section-kicker { @apply flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-[#b95f48] before:h-px before:w-7 before:bg-current; } }
